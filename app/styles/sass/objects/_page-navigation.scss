@@ -1,0 +1,29 @@
+nav {
+  border: none;
+  display: block;
+  border-bottom: 1px solid #e5e2de;
+  height: 35px;
+  > ul {
+    list-style: none;
+    > li {
+      display:inline-block;
+      float: left;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      border-right: 1px solid #e5e2de;
+      a {
+        height: 21px;
+        color: #444;
+        display: block;
+        border-bottom: none;
+        padding: 7px 10px 7px 9px;
+
+        &:hover {
+          background: #00aed3;
+          color: #fff;
+        }
+      }
+    }
+  }
+}

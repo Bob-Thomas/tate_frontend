@@ -2,46 +2,56 @@
 
 angular.module('Tate', [
 
-    'Tate.About',
-    //Vendor
-    'ngCookies',
-    'ngResource',
-    'ngSanitize',
-    'ngAnimate',
-    'ui.bootstrap',
-    'ui.router',
-    'LocalStorageModule'
+  'Tate.About',
+  //Vendor
+  'ngCookies',
+  'ngResource',
+  'ngSanitize',
+  'ngAnimate',
+  'ui.router',
+  'LocalStorageModule'
 ])
-    .config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
+  .config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
 
-        $locationProvider.html5Mode(true).hashPrefix('!');
+    $locationProvider.html5Mode(true).hashPrefix('!');
 
-        ///////////////////
-        // States Config //
-        ///////////////////
+    ///////////////////
+    // States Config //
+    ///////////////////
 
-        // For any unmatched url, redirect to root
-        $urlRouterProvider.otherwise('/');
+    // For any unmatched url, redirect to root
+    $urlRouterProvider.otherwise('/');
 
-        $stateProvider
+    $stateProvider
 
-            ///////////////////
-            //Base Home State//
-            ///////////////////
+      ///////////////////
+      //Base Home State//
+      ///////////////////
 
-            .state('home', {
-                abstract: true,
-                url: '/',
-                views: {
-                        template: '<h1> test </h1>',
-                        controller: 'MainCtrl'
-                    }
-            }).
-            state('home.about', {
-                url:'about',
-                views: {
-                        templateUrl: '../views/about.html',
-                        controller: 'AboutCtrl'
-                    }
-            });
-    });
+      .state('home', {
+        url: '/',
+        views: {
+          '': {
+            templateUrl: '../views/templates/layout.html'
+          },
+          'header@home' : {
+            templateUrl: '../views/templates/header.html'
+          },
+          'footer@home' : {
+            templateUrl: '../views/templates/footer.html'
+          },
+          'content@home': {
+            templateUrl: '../views/templates/home-content.html'
+          }
+        }
+      }).
+      state('home.about', {
+        url:'/about',
+        views: {
+          '': {
+            templateUrl: '../views/about.html',
+            controller: 'AboutCtrl'
+          }
+        }
+      });
+  });

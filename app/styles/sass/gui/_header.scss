@@ -1,0 +1,11 @@
+header.page-header {
+  background-color: white;
+  height: 144px;
+  section {
+    height:120px;
+    > img {
+      margin-left: 5px;
+      margin-top: 5px;
+    }
+  }
+}
