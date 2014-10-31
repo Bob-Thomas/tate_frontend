@@ -1,18 +1,20 @@
 .slider {
   .slides {
+    overflow-x: visible;
     .slide {
+      display: inline-flex;
       img {
+        order:0;
         width: 720px;
         height: 415px;
-        margin-top: 4px;
-        float: left;
+        margin-top: 5px;
       }
-      
+
       aside {
-        float: left;
+        order:1;
         background: rgb(242, 77, 77);
         width: 240px;
-        height: 414px;
+        height: 415px;
         margin-top: 5px;
       }
     }
