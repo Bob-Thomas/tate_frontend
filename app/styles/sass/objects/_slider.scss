@@ -12,10 +12,57 @@
 
       aside {
         order:1;
-        background: rgb(242, 77, 77);
+        background: $footer-background;
         width: 240px;
         height: 415px;
         margin-top: 5px;
+
+        article {
+          position: relative;
+          z-index: 1000;
+          display: block;
+          height: 140px;
+          float: right;
+          padding-left: 15px;
+          margin-left: 5px;
+          width: 180px;
+          margin-top: 20px;
+          margin-right: 5px;
+          background: #fff;
+          border-right: 5px solid #00aed3;
+
+          header {
+
+            h2 {
+              padding: 11px 10px 10px 10px !important;
+              font-weight: normal;
+              font-size: 1.2em!important;
+            }
+
+            a {
+              border-bottom: 1px solid #00aed3;
+              float: none;
+
+              &:hover {
+                color: #0090b5;
+              }
+            }
+          }
+
+          p {
+            padding:11px 25px 10px 10px;
+          }
+
+          .arrow {
+            height: 68px;
+            background: url(http://images.tate.org.uk/sites/all/themes/tatebase/images/work-of-week.png) bottom left no-repeat;
+            position: absolute;
+            width: 60px;
+            left: -17px;
+            top: 74px;
+            z-index: -1;
+          }
+        }
       }
     }
   }

@@ -1,12 +1,11 @@
 body {
   height: 100%;
   width: 100%;
-  background-image: url('../../images/test.jpg');
   background-color: $background-color;
   position: relative;
   overflow-x: hidden;
   overflow-y: initial;
-  opacity: 0.6;
+  //opacity: 0.6;
   //  div ui-view has a default height of 0, which causes its children to not be able to be 100% height, so set this to 100% as well
   > div[ui-view] {
     height: 100%;

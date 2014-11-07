@@ -1,0 +1,108 @@
+footer {
+  background: $footer-background;
+  font-size: 1.2em;
+
+  > .footer-content {
+    display: flex;
+    width: 960px;
+    margin: 0 auto;
+  }
+
+  section {
+    flex: 1;
+    border-left: 1px solid #555;
+    margin-left: -1px;
+    display: block;
+    margin-top: 30px;
+    background: #444;
+    height: 100%;
+    &:first-child {
+      border-left: 0;
+    }
+
+    header {
+      margin: 0 0 0 15px;
+      padding: 0 10px 5px 0;
+      color: #efefef;
+      display: block;
+      width: auto;
+      font-weight: normal;
+    }
+
+    article {
+
+      p {
+        padding: 2px 15px;
+        color: #dedede;
+        font-size: 0.9em;
+        line-height: 1.75em;
+      }
+
+      form {
+        padding: 10px 15px;
+        width: 210px;
+      }
+
+      input[type=submit] {
+        width: auto;
+        -webkit-appearance: none;
+        -moz-border-radius: 11px;
+        -webkit-border-radius: 11px;
+        -moz-background-clip: padding;
+        -webkit-background-clip: padding;
+        background-clip: padding-box;
+        border-radius: 11px;
+        border: none;
+        cursor: pointer;
+        font: normal 1em Arial, sans-serif;
+        outline: 0;
+        overflow: visible;
+        padding: 4px 30px 4px 15px;
+        text-shadow: none;
+        background: #555 url(http://images.tate.org.uk/sites/all/themes/tatebase/images/panel-button-bg-light.png) top right no-repeat;
+        background-position-y: 4px;
+        margin: 0;
+        color: #ccc;
+      }
+
+      input[type=email] {
+        display: block;
+        width: 180px;
+        height: 20px;
+        border: 1px #555 solid;
+        background: #4a4a4a;
+        margin: 0 0 10px 0;
+        color: #3f3f3f;
+        padding: 2px 5px;
+        position: relative;
+      }
+      ul {
+        margin: 0;
+        padding: 0;
+        line-height: 2.1em;
+        font-size: 0.9em;
+
+        li {
+          color: #ccc;
+          position: relative;
+          font-size: 0.9em;
+          line-height: 1;
+          padding: 5px 15px;
+
+          &:hover {
+            padding-left: 0;
+            a {
+              color: #efefef;
+              text-decoration: none;
+              border-left: 5px solid #efefef;
+              padding: 0 10px 0 0;
+            }
+          }
+        }
+      }
+
+    }
+
+  }
+}
+
