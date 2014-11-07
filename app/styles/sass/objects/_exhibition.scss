@@ -1,0 +1,78 @@
+.exhibition {
+  flex:1;
+  padding: 0 0 20px 0;
+  display: block;
+  position: relative;
+  border-right: 1px #e5e2de solid;
+
+  &:first-child {
+    border-left: 1px #e5e2de solid;
+  }
+
+  .box-header {
+    line-height: 1.45em;
+    margin: 5px 10px -5px 10px;
+    font-size: 0.75em;
+    font-weight: bold;
+    color: #565656;
+    text-transform: uppercase;
+    display: block;
+    min-height: 30px;
+    text-align: left;
+  }
+
+  .exhibition-title {
+    margin: 0 25px 0 10px;
+    display: block;
+    text-align: left;
+    max-width: 610px;
+  }
+
+  .exhibition-information {
+    padding: 11px 10px 3px;
+    color: #565656;
+    display:block;
+  }
+
+  .book-now {
+    text-align: right;
+
+    > a {
+      color: #fff;
+      width: auto;
+      -webkit-appearance: none;
+      -moz-border-radius: 11px;
+      -webkit-border-radius: 11px;
+      -moz-background-clip: padding;
+      -webkit-background-clip: padding;
+      background-clip: padding-box;
+      border-radius: 11px;
+      border: none;
+      cursor: pointer;
+      font: normal 1em Arial,sans-serif;
+      outline: 0;
+      overflow: visible;
+      padding: 4px 30px 4px 15px;
+      text-shadow: none;
+      display: auto;
+      background: #444 url(http://images.tate.org.uk/sites/all/themes/tatebase/images/panel-button-bg-light.png) no-repeat;
+      background-position-x: 95%;
+      background-position-y: 3px;
+      &:hover {
+        background: #00aed3 url(http://images.tate.org.uk/sites/all/themes/tatebase/images/panel-button-bg-light.png) top right no-repeat;
+        color: #FFFFFF;
+      }
+    }
+  }
+
+  > img {
+    padding-left: 5px;
+  }
+
+  > time {
+    padding: 11px 10px 0 10px;
+    line-height: 1.45em;
+    color: #565656;
+    display:block;
+  }
+}
