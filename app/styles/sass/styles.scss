@@ -1,3 +1,5 @@
+@import "mixins";
+
 @import "generic/reset";
 @import "variables";
 @import "base/body";
@@ -11,3 +13,5 @@
 @import "objects/heads-up";
 @import "objects/exhibitions";
 @import "objects/exhibition";
+@import "objects/rooms";
+@import "objects/room";

@@ -44,9 +44,49 @@ angular.module('Tate', [
             templateUrl: '../views/templates/home-content.html'
           }
         }
-      }).
-      state('home.about', {
-        url:'/about',
+      })
+      .state('home.ticket', {
+        url: 'kaartje',
+        views: {
+          'content@home': {
+            templateUrl: '../views/templates/order-ticket.html'
+          }
+        }
+      })
+      .state('home.ticket.order', {
+        url: '/bestellen',
+        views: {
+          'content@home': {
+            templateUrl: '../views/templates/order-ticket.html'
+          }
+        }
+      })
+      .state('home.darwin', {
+        url: 'darwin',
+        views: {
+          'content@home': {
+            templateUrl: '../views/templates/darwin.html'
+          }
+        }
+      })
+      .state('home.rooms', {
+        url: 'rooms',
+        views: {
+          'content@home': {
+            templateUrl: '../views/templates/rooms.html'
+          }
+        }
+      })
+      .state('home.contact', {
+        url: 'contact',
+        views: {
+          'content@home': {
+            templateUrl: '../views/templates/contact.html'
+          }
+        }
+      })
+      .state('home.about', {
+        url:'about',
         views: {
           '': {
             templateUrl: '../views/about.html',

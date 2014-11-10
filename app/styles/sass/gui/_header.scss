@@ -1,6 +1,6 @@
 header.page-header {
   background-color: white;
-  height: 144px;
+  height: 100%;
   section {
     height:120px;
     > img {
@@ -8,4 +8,11 @@ header.page-header {
       margin-top: 5px;
     }
   }
+}
+
+
+header.content-header {
+  text-align: center;
+  margin: auto 0;
+  font-size: 3em;
 }

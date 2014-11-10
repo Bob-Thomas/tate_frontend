@@ -1,13 +1,15 @@
 <header class="page-header">
   <section>
-    <img src="images/tate-head-logo_4.png" alt="logo"/>
+    <a ui-sref="home">
+      <img src="images/tate-head-logo_4.png" alt="logo"/>
+    </a>
   </section>
   <nav class="navigation">
     <ul id="main-menu">
-      <li><a>Home</a></li>
-      <li><a>Darwin</a></li>
-      <li><a>Zalen</a></li>
-      <li><a>Contact</a></li>
+      <li><a ui-sref="home">Home</a></li>
+      <li><a ui-sref="home.darwin">Darwin</a></li>
+      <li><a ui-sref="home.rooms">Zalen</a></li>
+      <li><a ui-sref="home.contact">Contact</a></li>
     </ul>
   </nav>
 </header>
