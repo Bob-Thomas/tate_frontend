@@ -1,32 +1,88 @@
 <div class="content-container">
-  <section class="ticket-box">
+  <section ng-if="!payment" class="ticket-box">
     <header class="content-header">Kaartje kopen</header>
     <form class="ticket-form" action="">
-      <input type="number" name="amount" value="0"/>
+      <div class="form-controls">
+        <label for="amount">
+          <span>Aantal tickets</span>
+          <input type="number" min="1" id="amount" ng-model='amount' name="amount" ng-change="users(amount)" ng-value="1"/>
+        </label>
+        <label for="family">
+          <span>Familie tickets</span>
+          <input type="checkbox" id="family" ng-model="family" ng-change="updateInput()" name="family"/>
+        </label>
+      </div>
+      <article class="ticket-form-box" ng-repeat="user in form">
+        <label for="firstName-{{$index}}">
+          <span>Voornaam</span>
+          <input type="text" id="firstName-{{$index}}" name="firstName-{{$index}}" ng-model="user.firstName" ng-value="user.firstName" placeholder="Voornaam">
+          <span class="error" ng-if="user.error.firstName">{{user.error.firstName}}</span>
+        </label>
 
-      <article class="ticket-form-box">
-        <label for="firstName">Voornaam</label>
-        <input type="text" id="firstName" name="firstName" placeholder="Voornaam">
+        <label for="lastName-{{$index}}">
+          <span>Achternaam:</span>
+          <input ng-if="family" type="text" id="lastName-{{$index}}" name="lastName-{{$index}}" ng-model="familyModel.lastName" placeholder="Achternaam">
+          <input ng-if="!family" type="text" id="lastName-{{$index}}" name="lastName-{{$index}}" ng-model="user.lastName" placeholder="Achternaam">
+          <span class="error" ng-if="user.error.lastName">{{user.error.lastName}}</span>
 
-        <label for="lastName">Achternaam</label>
-        <input type="text" id="lastName" name="lastName" placeholder="Achternaam">
+        </label>
 
-        <label for="birthDate">Geboorte Datum</label>
-        <input type="date" id="birthDate" name="birthDate" value="1995-01-01">
+        <label for="birthDate-{{$index}}">
+          <span>Geboorte Datum:</span>
+          <input type="date" id="birthDate-{{$index}}" name="birthDate-{{$index}}" ng-model='user.birthDate' ng-value="user.birthDate">
+          <span class="error" ng-if="user.error.birthDate">{{user.error.birthDate}}</span>
+        </label>
 
-        <label for="email">Email</label>
-        <input type="text" id="email" name="email" placeholder="Email">
+        <label for="email-{{$index}}">
+          <span>Email:</span>
+          <input ng-if="family" type="text" id="email-{{$index}}" name="email-{{$index}}" ng-model="familyModel.email" placeholder="Email">
+          <input ng-if="!family" type="text" id="email-{{$index}}" name="email-{{$index}}" ng-model="user.email" placeholder="Email">
+          <span class="error" ng-if="user.error.email">{{user.error.email}}</span>
+        </label>
 
-        <label for="residence">Woonplaats</label>
-        <input type="text" id="residence" name="residence" placeholder="Woonplaats">
+        <label for="zipCode-{{$index}}">
+          <span>zipCode:</span>
+          <input ng-if="family" type="text" id="zipCode-{{$index}}" name="zipCode-{{$index}}" ng-model="familyModel.zipCode" placeholder="zipCode">
+          <input ng-if="!family" type="text" id="zipCode-{{$index}}" name="zipCode-{{$index}}" ng-model="user.zipCode" placeholder="zipCode">
+          <span class="error" ng-if="user.error.zipCode">{{user.error.zipCode}}</span>
+        </label>
 
-        <label for="city">Stad/Provincie</label>
-        <input type="text" id="city" name="city" placeholder="Stad">
+        <label for="residence-{{$index}}">
+          <span>Woonplaats:</span>
+          <input ng-if="family" type="text" id="residence-{{$index}}" name="residence-{{$index}}" ng-model="familyModel.residence" placeholder="Woonplaats">
+          <input ng-if="!family" type="text" id="residence-{{$index}}" name="residence-{{$index}}" ng-model="user.residence" placeholder="Woonplaats">
+          <span class="error" ng-if="user.error.residence">{{user.error.residence}}</span>
+
+        </label>
+
+        <label for="city-{{$index}}">
+          <span>Stad/Provincie:</span>
+          <input ng-if="family" type="text" id="city-{{$index}}" name="city-{{$index}}" ng-model="familyModel.city" placeholder="Stad">
+          <input ng-if="!family" type="text" id="city-{{$index}}" name="city-{{$index}}" ng-model="user.city" placeholder="Stad">
+          <span class="error" ng-if="user.error.city">{{user.error.city}}</span>
+
+        </label>
 
       </article>
-
-      <input type="submit" value="Bestellen" name="submit"/>
+      {{submitting}}
+      Prijs : {{price}}
+      <input type="submit" value="Bestellen" ng-click="checkForm()" name="submit"/>
 
     </form>
+  </section>
+
+  <section ng-if="payment" class="ticket-box">
+    <header class="content-header">Betaal methode</header>
+    Prijs : {{price}}
+    <select>
+      <option>ING</option>
+      <option>RABO</option>
+      <option>ABN AMBRO</option>
+      <option>KNAB</option>
+      <option>ASN</option>
+      <option>SNS BANK</option>
+    </select>
+
+    <input type="submit" value="betaal en bestel" ng-click="submit()"/>
   </section>
 </div>

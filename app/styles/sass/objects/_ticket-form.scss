@@ -1,0 +1,46 @@
+.ticket-form {
+  width: 100%;
+
+  .form-controls {
+    display:flex;
+    flex-flow:row wrap;
+
+    label {
+      display: flex;
+      flex:100%;
+      flex-flow:row wrap;
+
+      span {
+        flex:100%;
+      }
+      input {
+        flex:100%;
+        max-width:100px;
+      }
+    }
+  }
+
+  .ticket-form-box {
+    margin: 10px 25%;
+    flex-flow: row wrap;
+    display: flex;
+
+      label {
+        text-align: left;
+        flex:100%;
+        display: flex;
+        span {
+          flex:25%;
+          &.error {
+            flex:0;
+            position: absolute;
+          }
+        }
+        input {
+          flex:75%;
+          width: 100%;
+          clear: both;
+        }
+      }
+  }
+}

@@ -168,7 +168,8 @@ module.exports = function (grunt) {
           'cache-location': '/tmp/sass-cache'
         },
         files: {
-          './app/styles/css/styles.css': './app/styles/sass/styles.scss'
+          './app/styles/css/styles.css': './app/styles/sass/styles.scss',
+          './app/styles/css/print.css': './app/styles/sass/print.scss'
         }
       },
       dist: {

@@ -1,0 +1,18 @@
+<div class="content-container">
+  <header class="content-header">Ticket informatie</header>
+  <a style="color:#6D9F00;text-decoration:none;" class="printfriendly" onclick="window.print();return false;" title="Printer Friendly and PDF"><img style="border:none;-webkit-box-shadow:none;box-shadow:none;" src="http://cdn.printfriendly.com/button-print-grnw20.png" alt="Print Friendly and PDF"/></a>
+  <section class="ticket-view">
+    <article class="ticket" ng-repeat="order in orders" style="background-image:url('http://www.weedonislandcenter.org/images/image_artifact.jpg');">
+      <header><h1>Darwin museum</h1></header>
+      <div class="order-information">
+        <span>Naam: {{order.information.firstName + " " + order.information.lastName}}</span>
+        <span>Geboorte datum: {{order.information.birthDate}}</span>
+        <span>Leeftijd: {{order.information.age}}</span>
+        <span>Postcode:  {{order.information.zipCode}}</span>
+        <span>Woonplaats:   {{order.information.residence}}</span>
+        <span>OrderNummer: {{order.information.ticketId}}</span>
+      </div>
+      <img alt="barcode" src="data:image/png;base64,{{order.barCode}}" width="200" height="200"/>
+    </article>
+  </section>
+</div>

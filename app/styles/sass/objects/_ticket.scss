@@ -1,0 +1,28 @@
+.ticket-view {
+    width:100%;
+    display:flex;
+    flex-flow: row wrap;
+
+  .ticket {
+    background-size:100%;
+    background-repeat: no-repeat;
+    color:white;
+    margin:0 auto;
+    border: 1px solid black;
+    flex:50%;
+    max-width:200px;
+    header {
+      font-size: 2em;
+      text-align: center;
+      height: 70px;
+    }
+    .order-information {
+      display: flex;
+      flex-flow:row wrap;
+      span {
+        text-align: left;
+        flex: 100%;
+      }
+    }
+  }
+}

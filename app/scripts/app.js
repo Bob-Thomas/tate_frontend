@@ -3,6 +3,9 @@
 angular.module('Tate', [
 
   'Tate.About',
+  'Tate.Controllers.TicketOrder',
+  'Tate.Controllers.TicketView',
+  'Tate.Services.Ticket',
   //Vendor
   'ngCookies',
   'ngResource',
@@ -57,7 +60,22 @@ angular.module('Tate', [
         url: '/bestellen',
         views: {
           'content@home': {
-            templateUrl: '../views/templates/order-ticket.html'
+            templateUrl: '../views/templates/order-ticket.html',
+            controller: 'ticketOrderController'
+          }
+        }
+      })
+      .state('home.ticket.order.complete', {
+        url: '/overzicht',
+        views: {
+          'content@home': {
+            templateUrl: '../views/templates/ticket-show.html',
+            controller: 'ticketViewController',
+            resolve : {
+              loadedOrder : function(ticket) {
+                return ticket.getOrder()
+              }
+            }
           }
         }
       })
