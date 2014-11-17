@@ -24,7 +24,10 @@ angular.module('Tate.Services.Ticket', [])
 
         function retrieveOrder(url) {
           var deferred = $q.defer();
-
+          var url = 'http://tate:5000/ticket/order/';
+          if(id) {
+            url = 'http://tate:5000/ticket/get/'+id
+          }
           $http({
             method: 'GET',
             url:location.protocol+"//"+location.hostname+':5000/'+url
