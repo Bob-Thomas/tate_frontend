@@ -55,63 +55,20 @@
     </div>
 
     <div class="exhibitions">
-      <article class="box exhibition">
+      <article class="box exhibition" ng-repeat="artifact in artifacts">
         <header class="box-header">
-          <span>TATE BRITAIN : EXHIBITION</span>
+          <span ng-bind="artifact.geologicalPeriod"></span>
         </header>
-        <img src="./images/exhibitions/smallexhibit1.jpg" alt="exhibition 1"/>
-        <span class="exhibition-title">The EY Exhibition: Late Turner – Painting Set Free</span>
-        <time>10 September 2014 – 25 January 2015</time>
+        <img src="data:image/jpeg;base64,{{artifact.image}}" alt="{{artifact.name}}" width="200px" height="181"/>
+        <span class="exhibition-title" ng-bind="artifact.name"></span>
+        <time>{{artifact.dateFound}}</time>
           <span class="exhibition-information">
-            Bringing together breathtaking works from the UK and abroad, this exhibition celebrates Turner’s astonishing creative flowering in these later years
+            Gevonden in {{artifact.locationFound}}
           </span>
 
         <div class="book-now"><a ui-sref="home.ticket.order">kaartje kopen</a></div>
       </article>
 
-      <article class="box exhibition">
-        <header class="box-header">
-          <span>TATE BRITAIN : EXHIBITION</span>
-        </header>
-        <img src="./images/exhibitions/smallexhibit2.jpg" alt="exhibition 1"/>
-        <span class="exhibition-title">The EY Exhibition: Late Turner – Painting Set Free</span>
-        <time>10 September 2014 – 25 January 2015</time>
-          <span class="exhibition-information">
-            Bringing together breathtaking works from the UK and abroad, this exhibition celebrates Turner’s astonishing creative flowering in these later years
-          </span>
-
-        <div class="book-now"><a ui-sref="home.ticket.order">kaartje kopen</a></div>
-
-      </article>
-
-      <article class="box exhibition">
-        <header class="box-header">
-          <span>TATE BRITAIN : EXHIBITION</span>
-        </header>
-        <img src="./images/exhibitions/smallexhibit3.jpg" alt="exhibition 1"/>
-        <span class="exhibition-title">The EY Exhibition: Late Turner – Painting Set Free</span>
-        <time>10 September 2014 – 25 January 2015</time>
-          <span class="exhibition-information">
-            Bringing together breathtaking works from the UK and abroad, this exhibition celebrates Turner’s astonishing creative flowering in these later years
-          </span>
-
-        <div class="book-now"><a ui-sref="home.ticket.order">kaartje kopen</a></div>
-      </article>
-
-      <article class="box exhibition">
-        <header class="box-header">
-          <span>TATE BRITAIN : EXHIBITION</span>
-        </header>
-        <img src="./images/exhibitions/smallexhibit4.jpg" alt="exhibition 1"/>
-        <span class="exhibition-title">The EY Exhibition: Late Turner – Painting Set Free</span>
-        <time>10 September 2014 – 25 January 2015</time>
-          <span class="exhibition-information">
-            Bringing together breathtaking works from the UK and abroad, this exhibition celebrates Turner’s astonishing creative flowering in these later years
-          </span>
-
-        <div class="book-now"><a ui-sref="home.ticket.order">kaartje kopen</a></div>
-
-      </article>
 
     </div>
 

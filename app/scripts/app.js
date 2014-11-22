@@ -2,10 +2,11 @@
 
 angular.module('Tate', [
 
-  'Tate.About',
+  'Tate.Controllers.Home',
   'Tate.Controllers.TicketOrder',
   'Tate.Controllers.TicketView',
   'Tate.Services.Ticket',
+  'Tate.Services.Artifact',
   //Vendor
   'ngCookies',
   'ngResource',
@@ -44,7 +45,13 @@ angular.module('Tate', [
             templateUrl: '../views/templates/footer.html'
           },
           'content@home': {
-            templateUrl: '../views/templates/home-content.html'
+            templateUrl: '../views/templates/home-content.html',
+            controller: 'homeController',
+            resolve: {
+              artifacts: function(artifact) {
+                return artifact.getArtifacts();
+              }
+            }
           }
         }
       })

@@ -22,12 +22,12 @@ angular.module('Tate.Services.Ticket', [])
           return deferred.promise;
         }
 
-        function retrieveOrder() {
+        function retrieveOrder(url) {
           var deferred = $q.defer();
 
           $http({
             method: 'GET',
-            url:'http://localhost:5000/ticket/order'
+            url:'http://localhost:5000/'+url
           })
             .success(function(data) {
               deferred.resolve(data)
@@ -47,7 +47,10 @@ angular.module('Tate.Services.Ticket', [])
           return fireOrder(form)
         },
         getOrder:function() {
-          return retrieveOrder()
+          return retrieveOrder('ticket/order/')
+        },
+        getTicket:function(id) {
+          return retrieveOrder('ticket/get/'+id)
         }
       }
   });
