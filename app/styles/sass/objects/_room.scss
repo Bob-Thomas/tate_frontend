@@ -1,24 +1,54 @@
 article.room {
-  flex:1 50%;
+  width:200px;
+  height:200px;
+  flex:1 49%;
   position: relative;
   cursor: pointer;
-  &:hover img {
-    opacity:0.8;
-    @include transition(opacity, 0.2s, ease-in-out);
+  background: rgb(136, 104, 97);
+  border:1px solid black;
+  &:hover {
+    background: rgb(240, 186, 170);
+    @include transition(background, 0.2s, ease-in-out);
   }
 
   header {
-    position: absolute;
-    left: 200px;
-    top: 99px;
-    color: white;
-    font-size: 4em;
+    color: orange;
+    font-size: 3em;
+    text-align: center;
+    margin-top: 65px;
   }
 
+
   img {
-    height: 100%;
-    width:100%;
-    display: block;
-    @include transition(opacity, 0.3s, ease-in-out);
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    opacity: 0.2;
+  }
+}
+
+div.room {
+  .slider {
+    .slide {
+      width:100%;
+      position: relative;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  header {
+    position: absolute;
+    left: 198px;
+    top: 131px;
+    font-size: 5em;
+    color: orange;
+  }
+
+
+  .information {
+    word-break: break-word;
+    font-size: 22px;
+    line-height: 31px;
   }
 }

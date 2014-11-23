@@ -1,0 +1,18 @@
+<div class="content-container">
+  <div class="room">
+    <section class="slider">
+      <div class="slides">
+        <article class="slide">
+          <img src="data:image/jpeg;base64,{{room.image}}" alt="slide 1"/>
+          <header>{{room.name}}</header>
+        </article>
+      </div>
+    </section>
+
+
+    <section class="information" ng-bind-html="room.content">
+
+    </section>
+  </div>
+
+</div>

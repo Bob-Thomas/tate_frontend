@@ -2,32 +2,13 @@
   <section class="rooms">
     <header class="content-header">Zalen</header>
     <div class="room-container">
-      <article class="room">
-        <img src="images/slides/slide1.jpg">
-        <header>
-          Zaal 1
-        </header>
-      </article>
-
-      <article class="room">
-        <img src="images/slides/slide1.jpg">
-        <header>
-          Zaal 1
-        </header>
-      </article>
-
-      <article class="room">
-        <img src="images/slides/slide1.jpg">
-        <header>
-          Zaal 1
-        </header>
-      </article>
-
-      <article class="room">
-        <img src="images/slides/slide1.jpg">
-        <header>
-          Zaal 1
-        </header>
+      <article class="room" ng-repeat="room in rooms">
+        <a ui-sref="home.rooms.room({ roomId:room.id })" href="/rooms/{{room.id}}">
+          <img  src="data:image/jpeg;base64,{{room.image}}">
+          <header>
+            {{room.name}}
+          </header>
+        </a>
       </article>
     </div>
   </section>

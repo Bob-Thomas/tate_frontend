@@ -3,10 +3,14 @@
 angular.module('Tate', [
 
   'Tate.Controllers.Home',
+  'Tate.Controllers.Rooms',
+  'Tate.Controllers.Room',
   'Tate.Controllers.TicketOrder',
   'Tate.Controllers.TicketView',
   'Tate.Services.Ticket',
   'Tate.Services.Artifact',
+  'Tate.Services.Performance',
+  'Tate.Services.Page',
   //Vendor
   'ngCookies',
   'ngResource',
@@ -50,6 +54,9 @@ angular.module('Tate', [
             resolve: {
               artifacts: function(artifact) {
                 return artifact.getArtifacts();
+              },
+              performances: function(performance) {
+                return performance.performances();
               }
             }
           }
@@ -95,10 +102,30 @@ angular.module('Tate', [
         }
       })
       .state('home.rooms', {
-        url: 'rooms',
+        url: 'zalen',
         views: {
           'content@home': {
-            templateUrl: '../views/templates/rooms.html'
+            templateUrl: '../views/templates/rooms.html',
+            controller: 'roomsController',
+            resolve : {
+              rooms: function(page) {
+                return page.pages()
+              }
+            }
+          }
+        }
+      })
+      .state('home.rooms.room', {
+        url: '/:roomId',
+        views: {
+          'content@home': {
+            templateUrl: '../views/templates/room.html',
+            controller: 'roomController',
+            resolve : {
+              room: function(page, $stateParams) {
+                return page.getPerformance($stateParams.roomId)
+              }
+            }
           }
         }
       })
