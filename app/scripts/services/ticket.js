@@ -8,7 +8,7 @@ angular.module('Tate.Services.Ticket', [])
 
           $http({
             method: 'POST',
-            url:location.protocol+location.host+':5000/ticket/order',
+            url:location.protocol+"//"+location.host+':5000/ticket/order',
             data:form
           })
             .success(function(data) {
