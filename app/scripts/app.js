@@ -129,11 +129,11 @@ angular.module('Tate', [
           }
         }
       })
-      .state('home.contact', {
-        url: 'contact',
+      .state('home.route', {
+        url: 'route',
         views: {
           'content@home': {
-            templateUrl: '../views/templates/contact.html'
+            templateUrl: '../views/templates/route.html'
           }
         }
       })
