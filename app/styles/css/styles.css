@@ -1,0 +1,423 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+a {
+  text-decoration: none; }
+
+body {
+  height: 100%;
+  width: 100%;
+  background-color: #e4e4e4;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: initial; }
+  body > div[ui-view] {
+    height: 100%; }
+
+div.container {
+  margin: 0 auto;
+  width: 960px;
+  min-height: 960px;
+  background: #fff;
+  border-right: 10px solid white;
+  border-left: 10px solid white; }
+
+footer {
+  background: #444;
+  font-size: 1.2em; }
+  footer > .footer-content {
+    display: flex;
+    width: 960px;
+    margin: 0 auto; }
+  footer section {
+    flex: 1;
+    border-left: 1px solid #555;
+    margin-left: -1px;
+    display: block;
+    margin-top: 30px;
+    background: #444;
+    height: 100%; }
+    footer section:first-child {
+      border-left: 0; }
+    footer section header {
+      margin: 0 0 0 15px;
+      padding: 0 10px 5px 0;
+      color: #efefef;
+      display: block;
+      width: auto;
+      font-weight: normal; }
+    footer section article p {
+      padding: 2px 15px;
+      color: #dedede;
+      font-size: 0.9em;
+      line-height: 1.75em; }
+    footer section article form {
+      padding: 10px 15px;
+      width: 210px; }
+    footer section article input[type=submit] {
+      width: auto;
+      -webkit-appearance: none;
+      -moz-border-radius: 11px;
+      -webkit-border-radius: 11px;
+      -moz-background-clip: padding;
+      -webkit-background-clip: padding;
+      background-clip: padding-box;
+      border-radius: 11px;
+      border: none;
+      cursor: pointer;
+      font: normal 1em Arial, sans-serif;
+      outline: 0;
+      overflow: visible;
+      padding: 4px 30px 4px 15px;
+      text-shadow: none;
+      background: #555 url(http://images.tate.org.uk/sites/all/themes/tatebase/images/panel-button-bg-light.png) top right no-repeat;
+      background-position-y: 4px;
+      margin: 0;
+      color: #ccc; }
+    footer section article input[type=email] {
+      display: block;
+      width: 180px;
+      height: 20px;
+      border: 1px #555 solid;
+      background: #4a4a4a;
+      margin: 0 0 10px 0;
+      color: #3f3f3f;
+      padding: 2px 5px;
+      position: relative; }
+    footer section article ul {
+      margin: 0;
+      padding: 0;
+      line-height: 2.1em;
+      font-size: 0.9em; }
+      footer section article ul li {
+        color: #ccc;
+        position: relative;
+        font-size: 0.9em;
+        line-height: 1;
+        padding: 5px 15px; }
+        footer section article ul li:hover {
+          padding-left: 0; }
+          footer section article ul li:hover a {
+            color: #efefef;
+            text-decoration: none;
+            border-left: 5px solid #efefef;
+            padding: 0 10px 0 0; }
+
+header.page-header {
+  background-color: white;
+  height: 100%; }
+  header.page-header section {
+    height: 120px; }
+    header.page-header section > img {
+      margin-left: 5px;
+      margin-top: 5px; }
+
+header.content-header {
+  text-align: center;
+  margin: auto 0;
+  font-size: 3em; }
+
+nav {
+  border: none;
+  display: block;
+  border-bottom: 1px solid #e5e2de;
+  height: 35px; }
+  nav > ul {
+    list-style: none; }
+    nav > ul > li {
+      display: inline-block;
+      float: left;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      border-right: 1px solid #e5e2de; }
+      nav > ul > li a {
+        height: 21px;
+        color: #444;
+        display: block;
+        border-bottom: none;
+        padding: 7px 10px 7px 9px; }
+        nav > ul > li a:hover {
+          background: #00aed3;
+          color: #fff; }
+
+.slider .slides {
+  overflow-x: visible; }
+  .slider .slides .slide {
+    display: inline-flex; }
+    .slider .slides .slide img {
+      order: 0;
+      width: 720px;
+      height: 415px;
+      margin-top: 5px; }
+    .slider .slides .slide aside {
+      order: 1;
+      background: #444;
+      width: 240px;
+      height: 415px;
+      margin-top: 5px; }
+      .slider .slides .slide aside article {
+        position: relative;
+        z-index: 1000;
+        display: block;
+        height: 140px;
+        float: right;
+        padding-left: 15px;
+        margin-left: 5px;
+        width: 180px;
+        margin-top: 20px;
+        margin-right: 5px;
+        background: #fff;
+        border-right: 5px solid #00aed3; }
+        .slider .slides .slide aside article header h2 {
+          padding: 11px 10px 10px 10px !important;
+          font-weight: normal;
+          font-size: 1.2em !important; }
+        .slider .slides .slide aside article header a {
+          border-bottom: 1px solid #00aed3;
+          float: none; }
+          .slider .slides .slide aside article header a:hover {
+            color: #0090b5; }
+        .slider .slides .slide aside article p {
+          padding: 0px 25px 10px 10px; }
+        .slider .slides .slide aside article .arrow {
+          height: 68px;
+          background: url(http://images.tate.org.uk/sites/all/themes/tatebase/images/work-of-week.png) bottom left no-repeat;
+          position: absolute;
+          width: 60px;
+          left: -17px;
+          top: 74px;
+          z-index: -1; }
+
+header.heads-up h1 {
+  margin: 5px;
+  background: #e4e4e4;
+  font-family: TateNewRegular,Arial,Helvetica,sans-serif;
+  font-weight: normal;
+  border: 1px solid #d9d5cf;
+  padding: 11px 10px 10px 10px; }
+
+.exhibitions {
+  overflow: hidden;
+  border-top: 1px solid #E5E2DE;
+  border-left: 1px white solid;
+  margin: -1px 0 0 0;
+  display: flex; }
+
+.exhibition {
+  flex: 5;
+  padding: 0 0 20px 0;
+  display: block;
+  position: relative;
+  border-right: 1px #e5e2de solid; }
+  .exhibition:first-child {
+    border-left: 1px #e5e2de solid; }
+  .exhibition .box-header {
+    line-height: 1.45em;
+    margin: 5px 10px -5px 10px;
+    font-size: 0.75em;
+    font-weight: bold;
+    color: #565656;
+    text-transform: uppercase;
+    display: block;
+    min-height: 30px;
+    text-align: left; }
+  .exhibition .exhibition-title {
+    margin: 0 25px 0 10px;
+    display: block;
+    text-align: left;
+    max-width: 610px; }
+  .exhibition .exhibition-information {
+    padding: 11px 10px 3px;
+    color: #565656;
+    display: block; }
+  .exhibition .book-now {
+    text-align: right; }
+    .exhibition .book-now > a {
+      color: #fff;
+      width: auto;
+      -webkit-appearance: none;
+      -moz-border-radius: 11px;
+      -webkit-border-radius: 11px;
+      -moz-background-clip: padding;
+      -webkit-background-clip: padding;
+      background-clip: padding-box;
+      border-radius: 11px;
+      border: none;
+      cursor: pointer;
+      font: normal 1em Arial,sans-serif;
+      outline: 0;
+      overflow: visible;
+      padding: 4px 30px 4px 15px;
+      text-shadow: none;
+      display: auto;
+      background: #444 url(http://images.tate.org.uk/sites/all/themes/tatebase/images/panel-button-bg-light.png) no-repeat;
+      background-position-x: 95%;
+      background-position-y: 3px; }
+      .exhibition .book-now > a:hover {
+        background: #00aed3 url(http://images.tate.org.uk/sites/all/themes/tatebase/images/panel-button-bg-light.png) top right no-repeat;
+        color: #FFFFFF;
+        background-position-x: 95%;
+        background-position-y: 3px; }
+  .exhibition > img {
+    padding-left: 5px; }
+  .exhibition > time {
+    padding: 11px 10px 0 10px;
+    line-height: 1.45em;
+    color: #565656;
+    display: block; }
+
+section.rooms .room-container {
+  display: flex;
+  flex-flow: row wrap; }
+
+article.room {
+  width: 200px;
+  height: 200px;
+  flex: 1 49%;
+  position: relative;
+  cursor: pointer;
+  background: #886861;
+  border: 1px solid black; }
+  article.room:hover {
+    background: #f0baaa;
+    -webkit-transition: background 0.2s ease-in-out;
+    -moz-transition: background 0.2s ease-in-out;
+    -ms-transition: background 0.2s ease-in-out;
+    -o-transition: background 0.2s ease-in-out;
+    transition: background 0.2s ease-in-out; }
+  article.room header {
+    color: orange;
+    font-size: 3em;
+    text-align: center;
+    margin-top: 65px; }
+  article.room img {
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    opacity: 0.2; }
+
+div.room .slider .slide {
+  width: 100%;
+  position: relative; }
+  div.room .slider .slide img {
+    width: 100%; }
+div.room header {
+  position: absolute;
+  left: 198px;
+  top: 131px;
+  font-size: 5em;
+  color: orange; }
+div.room .information {
+  word-break: break-word;
+  font-size: 22px;
+  line-height: 31px; }
+
+.ticket-view {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap; }
+  .ticket-view .ticket {
+    position: relative;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    color: white;
+    margin: 0 auto;
+    border: 1px solid black;
+    flex: 50%;
+    max-width: 200px; }
+    .ticket-view .ticket header {
+      font-size: 2em;
+      text-align: center;
+      height: 70px;
+      color: orange; }
+    .ticket-view .ticket .order-information {
+      display: flex;
+      flex-flow: row wrap; }
+      .ticket-view .ticket .order-information span {
+        text-align: center;
+        flex: 100%;
+        color: orange; }
+    .ticket-view .ticket img:first-child {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      opacity: 0.1; }
+
+.ticket-form {
+  width: 100%; }
+  .ticket-form .form-controls {
+    display: flex;
+    flex-flow: row wrap; }
+    .ticket-form .form-controls label {
+      display: flex;
+      flex: 100%;
+      flex-flow: row wrap; }
+      .ticket-form .form-controls label span {
+        flex: 100%; }
+      .ticket-form .form-controls label input {
+        flex: 100%;
+        max-width: 100px; }
+  .ticket-form .ticket-form-box {
+    margin: 10px 25%;
+    flex-flow: row wrap;
+    display: flex; }
+    .ticket-form .ticket-form-box label {
+      text-align: left;
+      flex: 100%;
+      display: flex; }
+      .ticket-form .ticket-form-box label span {
+        flex: 25%; }
+        .ticket-form .ticket-form-box label span.error {
+          flex: 0;
+          position: absolute; }
+      .ticket-form .ticket-form-box label input {
+        flex: 75%;
+        width: 100%;
+        clear: both; }
+
+/*# sourceMappingURL=styles.css.map */
