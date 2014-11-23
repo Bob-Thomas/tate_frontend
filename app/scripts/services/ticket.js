@@ -8,7 +8,7 @@ angular.module('Tate.Services.Ticket', [])
 
           $http({
             method: 'POST',
-            url:'http://localhost:5000/ticket/order',
+            url:'location.protocol+location.host:5000/ticket/order',
             data:form
           })
             .success(function(data) {
@@ -27,7 +27,7 @@ angular.module('Tate.Services.Ticket', [])
 
           $http({
             method: 'GET',
-            url:'http://localhost:5000/'+url
+            url:location.protocol+"//"+location.hostname+':5000/'+url
           })
             .success(function(data) {
               deferred.resolve(data)

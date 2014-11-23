@@ -7,7 +7,7 @@ angular.module('Tate.Services.Artifact', [])
 
       $http({
         method: 'GET',
-        url:'http://localhost:5000/'+url
+        url:location.protocol+"//"+location.hostname+':5000/'+url
       })
         .success(function(data) {
           deferred.resolve(data)
