@@ -420,4 +420,11 @@ div.room .information {
         width: 100%;
         clear: both; }
 
+.price-list {
+  float: right;
+  width: 200px;
+  line-height: 2em; }
+  .price-list span {
+    float: left; }
+
 /*# sourceMappingURL=styles.css.map */
