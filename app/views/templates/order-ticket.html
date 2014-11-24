@@ -1,6 +1,13 @@
 <div class="content-container">
   <section ng-if="!payment" class="ticket-box">
     <header class="content-header">Kaartje kopen</header>
+    <article class="price-list">
+      <header>Prijs lijst</header>
+      <span>Volwassenen 18/tm 59 &euro; 4,00</span>
+      <span>Jongeren 12/tm 17 &euro; 2,50</span>
+      <span>Ouderen 60+ &euro; 2,50</span>
+      <span>Kinderen zijn gratis</span>
+    </article>
     <form class="ticket-form" action="">
       <div class="form-controls">
         <label for="amount">
@@ -64,8 +71,8 @@
         </label>
 
       </article>
-      {{submitting}}
-      Prijs : {{price}}
+      <span class="price">Prijs : {{price | currency:"&euro;"}}</span>
+
       <input type="submit" value="Bestellen" ng-click="checkForm()" name="submit"/>
 
     </form>
@@ -73,7 +80,7 @@
 
   <section ng-if="payment" class="ticket-box">
     <header class="content-header">Betaal methode</header>
-    Prijs : {{price}}
+    <span>Prijs : {{price | currency:"&euro;"}}</span>
     <select>
       <option>ING</option>
       <option>RABO</option>
